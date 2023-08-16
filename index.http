@@ -1,0 +1,32 @@
+GET  http://localhost:8080/api/v1/products/static HTTP/1.1
+
+###
+GET http://localhost:8080/api/v1/products/64c4554ed7fa7621a271f69a HTTP/1.1
+
+###
+PATCH  http://localhost:8080/api/v1/products/64c4554ed7fa7621a271f69a HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"Shake and Bake",
+    "completed": false
+}
+###
+DELETE http://localhost:8080/api/v1/products/64c45de36402fe905426ad66 HTTP/1.1
+###
+POST  http://localhost:8080/api/v1/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"testing schema 2",
+    "completed": false
+}
+###
+PUT http://localhost:8080/api/v1/products/64c45de36402fe905426ad66 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"change the room"
+}
+###
+GET http://localhost:8080/api/v1/products/?sort=name&fields=name,price&limit=2&page=2 HTTP/1.1
